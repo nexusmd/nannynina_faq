@@ -12,7 +12,12 @@
 
 //define plugin dir path, url path, plugin data
 define( 'NANNYNINA_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
-define( 'NANNYNINA_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
+/**
+ * I know this is a bit of an overkill but I had to showoff somehow (:
+ *
+ * @param $class
+ * @return void
+ */
 function nannynina_autoload( $class ) {
 
     if ( class_exists( $class ) || stripos( $class, 'NANNYNINA_' ) === false ) {
